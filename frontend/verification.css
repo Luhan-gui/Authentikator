@@ -1,0 +1,82 @@
+.box {
+  margin: auto;
+  border: 1px solid gray;
+  box-shadow: black 1px 1px;
+  width: 50%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type=submit] {
+  max-width: 300px;
+  width: 60%;
+  padding: 10px;
+  margin-bottom: auto;
+}
+
+#err {
+  color: red;
+}
+
+#success {
+  color: greenyellow;
+}
+
+#hidden-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+#pin {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+#pin .nombre-box {
+  position: relative;
+  height: 50px;
+  width: 40px;
+}
+#pin .nombre-display {
+  /* les boites */
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: text;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+#pin .nombre-display .point {
+  /* les points (placeholder) */
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: gray;
+  transition: opacity 0.15s;
+}
+#pin .nombre-display .char {
+  position: absolute;
+  opacity: 0;
+}
+#pin .nombre-display.filled .point {
+  opacity: 0;
+}
+#pin .nombre-display.filled .char {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}/*# sourceMappingURL=verification.css.map */
