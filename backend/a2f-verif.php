@@ -4,6 +4,7 @@ use OTPHP\TOTP;
     $otp = new TOTP($secret);
     /* $bdd->prepare('SELECT secret FROM authentikator WHERE email = :email')
         $email = htmlspecialchars(strip_tags($email));
+        
     */
     /*// Récupérer les variables
     $host = getenv('PGHOST');

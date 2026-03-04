@@ -58,7 +58,7 @@ function checkValid(email){
         return;
     }
     
-    url = "../backend/a2f-verif.php?email="+encodeURIComponent(email)+"&pin="+encodeURIComponent(pin)
+    url = "/backend/a2f-verif.php?email="+encodeURIComponent(email)+"&pin="+encodeURIComponent(pin)
     sendGet(url,function() { 
             // Connexion OK 
             success.removeAttribute("hidden")

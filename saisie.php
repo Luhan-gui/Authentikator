@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vérification A2F</title>
-    <link rel="stylesheet" href="verification.css">
+    <link rel="stylesheet" href="./style/verification.css">
     <script src="verification.js" defer></script>
 </head>
 <body>
