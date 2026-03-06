@@ -10,8 +10,11 @@
 
     $_SESSION['email'] = "luhan@gmail.com";
     $email = $_SESSION['email'];
-    $totp = TOTP::generate($clock);
+    $totp = TOTP::generate($clock, 16);
     $totp = $totp->withLabel($email);
+    $goqr_me = $totp->getQrCodeUri(
+    'https://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=[DATA]&qzone=2&margin=0&size=300x300&ecc=M',
+    '[DATA]');
     require_once('_env.php');
     loadEnv('.env');
     //if (!isset($_SESSION['user_id'])) {
@@ -52,7 +55,7 @@
         <img class="logo" src="img/logo_alizon_front.svg" alt="Logo Alizon">
         <section class="container">
             <h4> Voici votre clé secrète : <?php echo $totp->getSecret(); ?></h4>
-            <img class="QR"src="img/qr.png" alt="QR Code Alizon">
+            <?php echo "<img src='{$goqr_me}' class='QR' alt='QR Code Alizon'>"; ?>
             <p> Veuillez entrer cette clé dans votre application d'authentification pour générer les codes de vérification à six chiffres nécessaires pour l'authentification à deux facteurs (A2F). Assurez-vous de conserver cette clé en lieu sûr, car elle est essentielle pour configurer votre compte Alizon avec l'application d'authentification. En cas de perte de cette clé, vous pourriez rencontrer des difficultés pour accéder à votre compte Alizon via l'A2F. </p>
             <p>Lorque vous avez entré la clé dans votre application d'authentification, veuillez rentrer votre code de vérification à six chiffres ci-dessous pour finaliser l'activation de l'authentification à deux facteurs (A2F) de votre compte Alizon.</p>
                 <form action="A2F-code.php" method="post">
