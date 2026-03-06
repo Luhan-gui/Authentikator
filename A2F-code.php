@@ -1,13 +1,17 @@
 <?php
-    use OTPHP\TOTP;
-
-    $clock = new MyClock();
-    echo "Heure actuelle : " . $clock->now()->format('Y-m-d H:i:s') . "\n";
-
-
     session_start();
+
+    require_once __DIR__ . '/vendor/autoload.php';
+
+    use OTPHP\TOTP;
+    use OTPHP\InternalClock;
+
+    $clock = new InternalClock();
+
     $_SESSION['email'] = "luhan@gmail.com";
     $email = $_SESSION['email'];
+    $totp = TOTP::generate($clock);
+    $totp = $totp->withLabel($email);
     require_once('_env.php');
     loadEnv('.env');
     //if (!isset($_SESSION['user_id'])) {
@@ -47,7 +51,7 @@
     <main>
         <img class="logo" src="img/logo_alizon_front.svg" alt="Logo Alizon">
         <section class="container">
-            <h4> Voici votre clé secrète : xxxxxxxxxxxxxxx </h4>
+            <h4> Voici votre clé secrète : <?php echo $totp->getSecret(); ?></h4>
             <img class="QR"src="img/qr.png" alt="QR Code Alizon">
             <p> Veuillez entrer cette clé dans votre application d'authentification pour générer les codes de vérification à six chiffres nécessaires pour l'authentification à deux facteurs (A2F). Assurez-vous de conserver cette clé en lieu sûr, car elle est essentielle pour configurer votre compte Alizon avec l'application d'authentification. En cas de perte de cette clé, vous pourriez rencontrer des difficultés pour accéder à votre compte Alizon via l'A2F. </p>
             <p>Lorque vous avez entré la clé dans votre application d'authentification, veuillez rentrer votre code de vérification à six chiffres ci-dessous pour finaliser l'activation de l'authentification à deux facteurs (A2F) de votre compte Alizon.</p>
