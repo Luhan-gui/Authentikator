@@ -101,7 +101,7 @@ try {
                     <input type="text" name="secret" value="<?php echo $secret; ?>" hidden>
                 </div>
                 <button class="bouton" type="submit">Valider</button>
-                <p id="err" hidden></p>
+                <p style="color:red; text-align: center;" id="err" hidden></p>
             </form>
         </section>
         <a class="btnJaune" href="A2F-pres.php">Retour</a>
@@ -126,7 +126,9 @@ try {
                 if(this.readyState == 4 && this.status == 200){
                     console.log(this.response)
                 }else if(this.readyState==4){ // Si erreur
-                    alert("Erreur !");
+                    alert("Erreur lors de la validation du code !");
+                    err.removeAttribute("hidden");
+                    err.innerText = "Code incorrect";
                 }
             };
             //Si OTP à 6 chiffre
@@ -134,6 +136,13 @@ try {
                 let repopt = checkOTP(); // return otpstr
                 reqHTTP.open("GET", "/backend/A2F-test.php?email=" + email +"&secret=" + secret + "&otp=" + repopt)
                 reqHTTP.send()
+                reqHTTP.onload = function() {
+                    if (this.status == 200) {
+                        if(this.responseText === "Code correct"){
+                            window.location.href = "A2F-conf.php";
+                        }
+                    }
+                };
                 err.setAttribute('hidden', '');
             }
             return false;

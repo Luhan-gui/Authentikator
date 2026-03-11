@@ -33,9 +33,9 @@ $otp = TOTP::createFromSecret($_GET['secret']);
 
 //Vérification de l'OTP envoyé
 if($otp->verify($_GET['otp']) == true){
-    echo "Masterclass";
+    echo "Code correct";
     $req->execute(['email' => $_GET['email'], 'secret' => $_GET['secret']]);
 }else{
-    echo "Masterchiasse";
+    return http_response_code(403);
 }
 ?>
