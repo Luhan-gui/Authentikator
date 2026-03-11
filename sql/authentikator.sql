@@ -1,4 +1,4 @@
-drop SCHEMA if EXISTS authentikator;
+drop SCHEMA if EXISTS authentikator cascade;
 create SCHEMA authentikator;
 set SCHEMA 'authentikator';
 
