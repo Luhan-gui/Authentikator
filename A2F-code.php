@@ -2,7 +2,7 @@
     Fichier : A2F-code.php
     Description : Page de configuration de l'authentification à deux facteurs (A2F) pour les utilisateurs d'Alizon.
     Auteur : SkibidiCorp - Luhan
-    Date de création : 2025-03-09
+    Date de création : 09/03/2026
     Libraries utilisées : OTPHP (pour la génération de TOTP)
 -->
 
@@ -15,14 +15,13 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use OTPHP\TOTP;
 use OTPHP\InternalClock;
-use OTPHP\Factory;
 
 // Horloge pour génération de TOTP
 $clock = new InternalClock();
 
-// Ajout d'info dans la session pour test
-$_SESSION['email'] = "luhan@gmail.com";
-$email = $_SESSION['email'];
+// Récupère le cookie email inscrit lors de la validation de l'email dans index.php
+
+$email = $_COOKIE['email'];
 
 require_once('_env.php');
 loadEnv('.env');

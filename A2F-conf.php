@@ -1,3 +1,13 @@
+<!-- 
+    Fichier : A2F-conf.php
+    Description : Page de confirmation de l'activation de l'authentification à deux facteurs (A2F) pour les 
+                utilisateurs d'Alizon, informant les utilisateurs que leur compte est désormais protégé par 
+                l'A2F et fournissant des instructions sur la manière de gérer cette fonctionnalité de sécurité.
+    Auteur : SkibidiCorp - Luhan
+    Date de création : 2026-03-09
+    Libraries utilisées : OTPHP (pour la génération de TOTP)
+-->
+
 <?php
 session_start();
 //if (!isset($_SESSION['user_id'])) {

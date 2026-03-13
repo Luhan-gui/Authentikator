@@ -1,13 +1,14 @@
-<?php
-session_start();
-//if (!isset($_SESSION['user_id'])) {
-//    header('Location: login.php');
-//    exit();
-//}
-?>
+<!-- 
+    Fichier : A2F-pres.php
+    Description : Page de présentation de l'authentification à deux facteurs (A2F) pour les utilisateurs d'Alizon,
+                expliquant les avantages et les étapes d'activation de cette fonctionnalité de sécurité.
+    Auteur : SkibidiCorp - Luhan
+    Date de création : 08/03/2026
+    Libraries utilisées : X
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
