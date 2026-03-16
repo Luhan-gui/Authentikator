@@ -124,7 +124,6 @@ try {
 
         const email = getCookie('email');
         const secret = <?php echo json_encode($secret); ?>;
-        const success = document.getElementById('success');
         const err = document.getElementById('err');
 
         // Lorsque formulaire envoyé
