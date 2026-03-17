@@ -1,10 +1,9 @@
 <!-- 
-    Fichier : A2F-code.php
+    Fichier : A2F-conn.php
     Description : Page de connexion de l'authentification à deux facteurs (A2F) pour les utilisateurs d'Alizon, 
                 permettant aux utilisateurs de saisir le code OTP généré par leur application d'authentification 
                 afin de vérifier leur identité et de les connecter sur leur compte. Cette page envoie le traitement 
-                de la validation du code OTP en AJAX et gère la connexion sécurisée des utilisateurs à leur compte 
-                Alizon en utilisant l'A2F.
+                du code OTP au backend pour validation et redirige les utilisateurs vers la page de confirmation en cas de succès.
     Auteur : SkibidiCorp - Luhan
     Date de création : 16/03/2026
     Libraries utilisées : OTPHP (pour la génération de TOTP)
