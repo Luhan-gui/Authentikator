@@ -1,6 +1,7 @@
 <?php
 //    Fichier : A2F-tesCon.php
-//    Description : Programme de vérification du code OTP envoyé par le client pour confirmer la connexion. Ce script reçoit les informations nécessaires (email, secret, OTP) via une requête GET en AJAX, 
+//    Description : Programme de vérification du code OTP envoyé par le client pour confirmer la connexion. 
+//                    Ce script reçoit les informations nécessaires (email, secret, OTP) via une requête GET en AJAX, 
 //                    vérifie la validité du code OTP en utilisant la bibliothèque OTPHP, et si le code est correct, 
 //                    il renvoie ok. En cas d'erreur ou de code incorrect, 
 //                    il renvoie un code de réponse HTTP 403 pour indiquer que l'accès est refusé.

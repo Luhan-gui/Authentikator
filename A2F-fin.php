@@ -7,5 +7,6 @@
 </head>
 <body>
     Vous êtes connecté !
+    <a href="A2F-supr.php">Désactiver l'A2F</a>
 </body>
 </html>

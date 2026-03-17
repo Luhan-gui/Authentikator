@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Alizon - A2F</title>
 </head>
-
 <body>
     <main>
         <img class="logo" src="img/logo_alizon_front.svg" alt="Logo Alizon">
@@ -94,7 +93,7 @@
                 reqHTTP.onload = function() {
                     if (this.status == 200) {
                         if(this.responseText === "Code correct"){
-                            window.location.href = "index.php";
+                            window.location.href = "A2F-confSupr.php";
                         }
                     }
                 };

@@ -1,12 +1,12 @@
 <?php
-//    Fichier : A2F-test.php
-//    Description : Programme de vérification du code OTP envoyé par le client pour l'activation de l'authentification à 
-//                    deux facteurs. Ce script reçoit les informations nécessaires (email, secret, OTP) via une requête GET en AJAX, 
+//    Fichier : A2F-testSupr.php
+//    Description : Programme de vérification du code OTP envoyé par le client pour la désactivation de l'authentification à 
+//                    deux facteurs. Ce script reçoit les informations nécessaires (email, OTP) via une requête GET en AJAX, 
 //                    vérifie la validité du code OTP en utilisant la bibliothèque OTPHP, et si le code est correct, 
-//                    il enregistre les informations dans la base de données PostgreSQL. En cas d'erreur ou de code incorrect, 
-//                    il renvoie un code de réponse HTTP 403 pour indiquer que l'accès est refusé.
+//                    il supprime les informations associées à l'email de la base de données PostgreSQL pour désactiver l'A2F. 
+//                    En cas d'erreur ou de code incorrect, il renvoie un code de réponse HTTP 403 pour indiquer que l'accès est refusé.
 //    Auteur : SkibidiCorp - Luhan
-//    Date de création : 09/03/2026
+//    Date de création : 17/03/2026
 //    Libraries utilisées : OTPHP (pour la génération de TOTP)
 
 // Charge les dépendances de Composer
