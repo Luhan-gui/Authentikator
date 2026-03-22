@@ -33,7 +33,7 @@ session_start();
                 facteurs. Nous vous recommandons vivement de réactiver l'A2F pour garantir la sécurité maximale
                 de votre compte Alizon.</p>
         </section>
-        <a class="bouton" href="A2F-conn.php">Mon Compte</a>
+        <a class="bouton" href="A2F-term.php">Fin</a>
         <a class="btnJaune" href="index.php">Accueil</a>
     </main>
     <?php include 'includes/footer.php'; ?>

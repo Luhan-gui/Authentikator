@@ -11,12 +11,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>A2F-Index</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="email"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #064082;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Bonjour !</h1>
-    Bienvenue sur la page de démonstration de l'authentification à deux facteurs (A2F). <br>
-    Cette page sert à rentrer des informations pour tester l'implémentation de l'A2F. <br>
+    Bienvenue sur la page de démonstration d'Authentikator. <br>
+    Cette page sert à rentrer des informations pour tester le fonctionnement de l'A2F. <br>
     Rentrer dans les champs suivants une adresse email afin de pouvoir tester l'implémentation de l'A2F. <br>
     <form>
         <input type="email" id="email" name="email" placeholder="Entrez votre adresse email" required>

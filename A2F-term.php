@@ -1,11 +1,10 @@
 <!-- 
-    Fichier : A2F-fin.php
-    Description : Page indiquant que l'utilisateur est connecté après avoir activé l'authentification à deux facteurs (A2F) dans le cadre de la démonstration d'Authentikator, avec des instructions pour garder la clé secrète et tester la désactivation de l'A2F.
+    Fichier : A2F-term.php
+    Description : Page indiquant la fin de l'utilisation d'Authentikator après avoir testé la désactivation de l'authentificateur, avec des instructions pour consulter l'A2F sur le site d'Alizon et réessayer l'implémentation en retournant à l'accueil.
     Auteur : SkibidiCorp - Luhan
     Date de création : 22/03/2026
     Libraries utilisées : X
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +32,10 @@
     </style>
 </head>
 <body>
-    <h1>Vous êtes connecté !</h1>
-    Garder votre clé secrète pour la prochaine étape pour pouvoir désactiver l'A2F. <br>
-    Vous pouvez tester la désactivation de l'A2F en cliquant sur le bouton ci-dessous :
-    <a href="A2F-supr.php">Désactiver l'A2F</a>
+    <h1>Fin de l'utilisation d'Authentikator</h1>
+    Merci d'avoir testé l'implémentation de l'authentificateur. <br>
+    N'hésitez pas à consulter l'A2F sur le site d'Alizon pour voir son fonctionnement en conditions réelles.
+    Vous pouvez réessayer l'implémentation de l'A2F en cliquant sur le bouton ci-dessous :
+    <a href="index.php">Retourner à l'accueil</a>
 </body>
 </html>

@@ -47,7 +47,7 @@
                 <p style="color:red; text-align: center;" id="err" hidden></p>
             </form>
         </section>
-        <a class="btnJaune" href="">Retour</a>
+        <a class="btnJaune" href="A2F-fin.php">Retour</a>
     </main>
     <?php include 'includes/footer.php'; ?>
     <script src="script/inputs.js"></script>

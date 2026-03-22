@@ -39,7 +39,7 @@ session_start();
                 contacter notre support client pour obtenir de l'aide afin de réinitialiser votre A2F et sécuriser à
                 nouveau votre compte Alizon.</p>
         </section>
-        <a class="bouton" href="A2F-conn.php">Mon Compte</a>
+        <a class="bouton" href="A2F-conn.php">Connexion</a>
         <a class="btnJaune" href="index.php">Accueil</a>
     </main>
     <?php include 'includes/footer.php'; ?>
